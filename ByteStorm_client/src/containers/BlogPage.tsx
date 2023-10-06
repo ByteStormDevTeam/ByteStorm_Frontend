@@ -1,7 +1,9 @@
-import React from 'react';
+import { useOutletContext } from 'react-router-dom';
+import BlogList from '../components/Home/BlogList';
+import { BlogType } from '../Types';
 
 const BlogPage = () => {
-    return <div>BlogPage</div>;
+    return <>{/* <BlogList /> */}</>;
 };
 
 export default BlogPage;
