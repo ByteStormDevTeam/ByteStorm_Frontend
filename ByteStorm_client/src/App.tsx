@@ -1,9 +1,7 @@
-import { useState } from 'react';
-
 import './App.css';
 import Header from './components/Header/Header';
 import axios from 'axios';
-import React from 'react';
+
 import { useQuery } from 'react-query';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';

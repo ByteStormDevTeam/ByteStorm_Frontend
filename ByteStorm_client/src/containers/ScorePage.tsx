@@ -1,4 +1,3 @@
-import React from 'react';
 import HighscoreList from '../components/Leaderboard/HighscoreList';
 
 const ScorePage = () => {

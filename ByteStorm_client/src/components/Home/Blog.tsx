@@ -1,4 +1,3 @@
-import React from 'react';
 import { BlogType } from '../../Types';
 import styled from 'styled-components';
 
@@ -26,7 +25,7 @@ const BlogRight = styled.div`
 const Blog = ({ title, date, content, imageRef, _id }: BlogType) => {
     return (
         <>
-            <BlogContainer>
+            <BlogContainer key={_id}>
                 <BlogLeft>
                     <img src={imageRef} height="200px" width="300px" />
                 </BlogLeft>

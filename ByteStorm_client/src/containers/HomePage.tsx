@@ -1,5 +1,3 @@
-import React from 'react';
-import { BlogType } from '../Types';
 import styled from 'styled-components';
 import { useOutletContext } from 'react-router-dom';
 import BlogList from '../components/Home/BlogList';
@@ -41,19 +39,17 @@ const HomePage = () => {
     const { blogData }: any = useOutletContext();
     return (
         <>
-            <Background>
-                <PageContainer>
-                    <HeroContainer className="HomePageImage">
-                        <HeroImage src="https://www.megavoxels.com/wp-content/uploads/2023/06/Pixel-Art-Duck-6-1015x1024.jpeg" />
-                        <HeroTitle>BYTESTORM</HeroTitle>
-                        <HeroText>
-                            A pixel top down bullethell game with roguelike
-                            elements.
-                        </HeroText>
-                    </HeroContainer>
-                    <BlogList blogData={blogData} />
-                </PageContainer>
-            </Background>
+            <PageContainer>
+                <HeroContainer className="HomePageImage">
+                    <HeroImage src="https://www.megavoxels.com/wp-content/uploads/2023/06/Pixel-Art-Duck-6-1015x1024.jpeg" />
+                    <HeroTitle>BYTESTORM</HeroTitle>
+                    <HeroText>
+                        A pixel top down bullethell game with roguelike
+                        elements.
+                    </HeroText>
+                </HeroContainer>
+                <BlogList blogData={blogData} />
+            </PageContainer>
         </>
     );
 };
