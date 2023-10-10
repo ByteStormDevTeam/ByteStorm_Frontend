@@ -1,9 +1,14 @@
 import React from 'react';
 import { BlogType } from '../../Types';
 import Blog from './Blog';
+import styled from 'styled-components';
 
-const BlogList = ({ blogData }) => {
-    console.log(blogData);
+const BlogListContainer = styled.ul`
+    display: flex;
+    flex-direction: column;
+`;
+
+const BlogList = ({ blogData }: any) => {
     const listedBlogs = blogData.map((blog: BlogType) => (
         <>
             <li id={blog._id}>
@@ -19,7 +24,7 @@ const BlogList = ({ blogData }) => {
     ));
     return (
         <div>
-            <ul>{listedBlogs}</ul>
+            <BlogListContainer>{listedBlogs}</BlogListContainer>
         </div>
     );
 };

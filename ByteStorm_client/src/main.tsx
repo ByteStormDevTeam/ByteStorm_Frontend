@@ -24,15 +24,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Routes>
                     <Route path="/" element={<App />}>
                         <Route index element={<HomePage />} />
-                        <Route path="blogpost/" element={<BlogPage />}>
-                            <Route
-                                path="newblogpost_bytestormdevteam123"
-                                element={<NewBlogPage />}
-                            />
-                        </Route>
+                        <Route path="blogpost" element={<BlogPage />}></Route>
                         <Route
-                            path="leaderboard/"
-                            element={<LeaderboardPage />}>
+                            path="newblogpost_bytestormdevteam123"
+                            element={<NewBlogPage />}
+                        />
+                        <Route path="leaderboard" element={<LeaderboardPage />}>
                             <Route path=":id" element={<ScorePage />} />
                         </Route>
                     </Route>

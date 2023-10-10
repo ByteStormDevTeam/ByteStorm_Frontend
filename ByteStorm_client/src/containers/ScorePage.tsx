@@ -1,7 +1,8 @@
 import React from 'react';
+import HighscoreList from '../components/Leaderboard/HighscoreList';
 
 const ScorePage = () => {
-    return <div>ScorePage</div>;
+    return <HighscoreList />;
 };
 
 export default ScorePage;

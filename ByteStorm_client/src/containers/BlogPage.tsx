@@ -3,7 +3,12 @@ import BlogList from '../components/Home/BlogList';
 import { BlogType } from '../Types';
 
 const BlogPage = () => {
-    return <>{/* <BlogList /> */}</>;
+    //TODO render an individual blog
+    return (
+        <>
+            <h1>I'm a blog</h1>
+        </>
+    );
 };
 
 export default BlogPage;
