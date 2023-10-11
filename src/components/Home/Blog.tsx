@@ -1,5 +1,7 @@
 import { BlogType } from '../../Types';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import BlogPage from '../../containers/BlogPage';
 
 const BlogContainer = styled.div`
     display: flex;
@@ -20,21 +22,25 @@ const BlogRight = styled.div`
     flex-direction: column;
     padding: 0.5rem;
     color: whitesmoke;
+    overflow: hidden;
 `;
 
 const Blog = ({ title, date, content, imageRef, _id }: BlogType) => {
     return (
         <>
-            <BlogContainer key={_id}>
-                <BlogLeft>
-                    <img src={imageRef} height="200px" width="300px" />
-                </BlogLeft>
-                <BlogRight>
-                    <h1>{title}</h1>
-                    <p>Date :{date}</p>
-                    <p>{content}</p>
-                </BlogRight>
-            </BlogContainer>
+            <Link to={`/blogpost/${_id}`}>
+                <BlogContainer key={_id}>
+                    <BlogLeft>
+                        <img src={imageRef} height="200px" width="300px" />
+                    </BlogLeft>
+
+                    <BlogRight>
+                        <h1>{title}</h1>
+                        <p>Date :{date}</p>
+                        <p>{content}</p>
+                    </BlogRight>
+                </BlogContainer>
+            </Link>
         </>
     );
 };
