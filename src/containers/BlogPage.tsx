@@ -1,6 +1,7 @@
 import { useOutletContext, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import { BlogType } from '../Types';
 
 const PageContainer = styled.div`
     margin: 0 10%;
@@ -37,7 +38,7 @@ const FormattedImage = styled.img`
 `;
 
 const BlogPage = () => {
-    const [blog, setBlog] = useState({});
+    const [blog, setBlog] = useState<null | BlogType>();
     const { blogData }: any = useOutletContext();
     const blogUUID: any = useParams();
     useEffect(() => {
@@ -47,6 +48,10 @@ const BlogPage = () => {
         setBlog(blogTemp[0]);
     }, []);
     //TODO render an individual blog
+    if (blog == null) {
+        return 'Loading';
+    }
+
     return (
         <>
             <PageContainer>

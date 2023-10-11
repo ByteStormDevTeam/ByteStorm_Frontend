@@ -1,7 +1,6 @@
 import { BlogType } from '../../Types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import BlogPage from '../../containers/BlogPage';
 
 const BlogContainer = styled.div`
     display: flex;
