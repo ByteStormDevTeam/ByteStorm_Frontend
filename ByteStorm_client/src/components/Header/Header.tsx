@@ -17,14 +17,8 @@ const Container = styled.div`
     margin: 0 10%;
 `;
 const BorderLayer = styled.div`
-    height: 2px;
-    border-bottom: solid 1px #ffff00;
-    box-shadow: 0px 4px 4px #ffff00;
-`;
-
-const BorderLayer2 = styled.div`
-    height: 2px;
-    border-bottom: solid 1px cyan;
+    border-bottom: solid 1px #d7d7d7;
+    box-shadow: 0px 4px 4px #ffffff8b;
 `;
 
 const Header = () => {
@@ -36,8 +30,6 @@ const Header = () => {
                         <HeaderButtonsGroup />
                     </Container>
                 </Headerdiv>
-                <BorderLayer />
-                <BorderLayer2 />
                 <BorderLayer />
             </HeaderContainer>
         </>

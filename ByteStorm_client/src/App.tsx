@@ -7,13 +7,14 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const fetchDBData = async () => {
-    const res = await axios.get('http://54.74.199.55:8080/api/blogpost/');
+    const res = await axios.get('http://localhost:8080/api/blogpost/');
     return res.data;
 };
 
 const Background = styled.div`
     background: #381c33;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
 `;
 const App = () => {
     const {

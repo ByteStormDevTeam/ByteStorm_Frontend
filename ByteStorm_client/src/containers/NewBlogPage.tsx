@@ -6,11 +6,18 @@ const FormWrapper = styled.div`
     padding: 5rem;
 `;
 
+const FormBody = styled.form`
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`;
+
 const NewBlogPage = () => {
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [content, setContent] = useState('');
-    const [link, setLink] = useState('');
+    const [imageRef, setImageRef] = useState('');
 
     const handleTitleChange = (e: any) => {
         setTitle(e.target.value);
@@ -22,13 +29,13 @@ const NewBlogPage = () => {
         setContent(e.target.value);
     };
     const handleLinkChange = (e: any) => {
-        setLink(e.target.value);
+        setImageRef(e.target.value);
     };
 
     const resetForm = () => {
         setContent('');
         setDate('');
-        setLink('');
+        setImageRef('');
         setTitle('');
     };
 
@@ -38,7 +45,7 @@ const NewBlogPage = () => {
             title,
             date,
             content,
-            link,
+            imageRef,
         };
         fetch('http://localhost:8080/api/blogpost/', {
             method: 'POST',
@@ -52,7 +59,7 @@ const NewBlogPage = () => {
     return (
         <>
             <FormWrapper>
-                <form onSubmit={handleFormSubmit}>
+                <FormBody onSubmit={handleFormSubmit}>
                     <label htmlFor="title">Title:</label>
                     <input
                         type="text"
@@ -77,11 +84,12 @@ const NewBlogPage = () => {
                     <label htmlFor="link">Link:</label>
                     <input
                         type="text"
-                        name="link"
-                        value={link}
+                        name="imageRef"
+                        value={imageRef}
                         onChange={handleLinkChange}
                     />
-                </form>
+                    <button>SUBMIT</button>
+                </FormBody>
             </FormWrapper>
         </>
     );
