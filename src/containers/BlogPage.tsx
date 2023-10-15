@@ -33,8 +33,14 @@ const ImageContainer = styled.div`
 `;
 
 const FormattedImage = styled.img`
-    max-width: 40vw;
-    max-height: auto;
+    width: 100%;
+    height: auto;
+`;
+
+const BlogTitle = styled.h1`
+    font-family: 'Pixelify Sans';
+    text-shadow: 2px 0px 16px black;
+    font-weight: 300;
 `;
 
 const BlogPage = () => {
@@ -57,7 +63,7 @@ const BlogPage = () => {
             <PageContainer>
                 <FlexTape>
                     <TextPageBox>
-                        <h1>{blog.title}</h1>
+                        <BlogTitle>{blog.title}</BlogTitle>
                         <h3>Date: {blog.date}</h3>
                         <p>{blog.content}</p>
                     </TextPageBox>

@@ -8,19 +8,21 @@ const BlogListContainer = styled.ul`
 `;
 
 const BlogList = ({ blogData }: any) => {
-    const listedBlogs = blogData.map((blog: BlogType) => (
-        <>
-            <li id={blog._id}>
-                <Blog
-                    title={blog.title}
-                    date={blog.date}
-                    content={blog.content}
-                    imageRef={blog.imageRef}
-                    _id={blog._id}
-                />
-            </li>
-        </>
-    ));
+    const listedBlogs = blogData
+        .map((blog: BlogType) => (
+            <>
+                <li id={blog._id}>
+                    <Blog
+                        title={blog.title}
+                        date={blog.date}
+                        content={blog.content}
+                        imageRef={blog.imageRef}
+                        _id={blog._id}
+                    />
+                </li>
+            </>
+        ))
+        .reverse();
     return (
         <div>
             <BlogListContainer>{listedBlogs}</BlogListContainer>
