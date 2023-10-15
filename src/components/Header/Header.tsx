@@ -4,6 +4,7 @@ import HeaderButtonsGroup from './HeaderButtonsGroup';
 const HeaderContainer = styled.div`
     position: fixed;
     width: 100vw;
+    z-index: 900;
 `;
 
 const Headerdiv = styled.div`

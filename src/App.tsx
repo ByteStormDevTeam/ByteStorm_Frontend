@@ -31,7 +31,6 @@ const App = () => {
         console.error('Database Error:', blogError);
         return <div>Error fetching blog data. Please try again later.</div>;
     }
-    console.log(blogData);
 
     return (
         <>

@@ -47,7 +47,7 @@ const NewBlogPage = () => {
             content,
             imageRef,
         };
-        fetch('http://localhost:8080/api/blogpost/', {
+        fetch('http://54.74.199.55:8080/api/blogpost/', {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: { 'Content-Type': 'application/json' },

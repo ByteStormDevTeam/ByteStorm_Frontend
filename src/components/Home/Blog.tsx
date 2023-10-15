@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const BlogContainer = styled.div`
     display: flex;
     justify-content: start;
-    width: 30vw;
     background: #a100b03e;
     border: solid 1px whitesmoke;
     border-radius: 0 25px 25px 0;
@@ -14,7 +13,9 @@ const BlogContainer = styled.div`
     gap: 1rem;
 `;
 
-const BlogLeft = styled.div``;
+const BlogLeft = styled.div`
+    border-right: 1px solid whitesmoke;
+`;
 
 const BlogRight = styled.div`
     display: flex;
@@ -22,6 +23,12 @@ const BlogRight = styled.div`
     padding: 0.5rem;
     color: whitesmoke;
     overflow: hidden;
+`;
+
+const BlogTitle = styled.h1`
+    font-family: 'Pixelify Sans';
+    text-shadow: 2px 0px 16px black;
+    font-weight: 300;
 `;
 
 const Blog = ({ title, date, content, imageRef, _id }: BlogType) => {
@@ -34,7 +41,7 @@ const Blog = ({ title, date, content, imageRef, _id }: BlogType) => {
                     </BlogLeft>
 
                     <BlogRight>
-                        <h1>{title}</h1>
+                        <BlogTitle>{title}</BlogTitle>
                         <p>Date :{date}</p>
                         <p>{content}</p>
                     </BlogRight>
