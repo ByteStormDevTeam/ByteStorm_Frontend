@@ -34,7 +34,9 @@ const HeaderButtonsGroup = () => {
                 <Link to={'/'}>
                     <HeaderButton>Home</HeaderButton>
                 </Link>
-                <WIPButton>Leaderboard</WIPButton>
+                <Link to={'/leaderboard'}>
+                    <HeaderButton>Leaderboard</HeaderButton>
+                </Link>
             </FlexTape>
         </>
     );

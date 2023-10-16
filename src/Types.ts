@@ -5,3 +5,9 @@ export type BlogType = {
     imageRef?: string;
     _id: string;
 };
+
+export type LeaderType = {
+    name: string;
+    score: number;
+    _id: string;
+};
