@@ -18,14 +18,14 @@ const HeaderButton = styled.button`
     }
 `;
 
-const WIPButton = styled.button`
-    padding: 0.5rem;
-    background: rgba(128, 128, 128, 0.2);
-    color: rgba(128, 128, 128, 0.2);
-    font-size: 1rem;
-    border: 1px solid rgba(128, 128, 128, 0.2);
-    border-radius: 15px;
-`;
+// const WIPButton = styled.button`
+//     padding: 0.5rem;
+//     background: rgba(128, 128, 128, 0.2);
+//     color: rgba(128, 128, 128, 0.2);
+//     font-size: 1rem;
+//     border: 1px solid rgba(128, 128, 128, 0.2);
+//     border-radius: 15px;
+// `;
 
 const HeaderButtonsGroup = () => {
     return (
