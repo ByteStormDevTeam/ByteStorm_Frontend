@@ -11,11 +11,8 @@ const fetchDBData = async () => {
     return res.data;
 };
 
-const Background = styled.div`
-    background: #381c33;
-    height: 100%;
-    min-height: 100vh;
-`;
+const Background = styled.div``;
+
 const App = () => {
     const {
         data: blogData,
