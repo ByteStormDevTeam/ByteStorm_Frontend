@@ -70,7 +70,7 @@ const HighscoreList = () => {
                     name={leader.name}
                     score={leader.score}
                     id={leader._id}
-                    place={index}
+                    place={index + pageNumber * 10}
                 />
             </li>
         )
