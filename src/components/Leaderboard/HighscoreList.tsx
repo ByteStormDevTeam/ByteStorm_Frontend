@@ -3,6 +3,20 @@ import { LeaderType } from '../../Types';
 import { useQuery } from 'react-query';
 import Highscore from './Highscore';
 import { useState } from 'react';
+import styled from 'styled-components';
+
+const PageButton = styled.button`
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    &:hover {
+        cursor: pointer;
+        background: whitesmoke;
+        color: black;
+    }
+`;
 
 const HighscoreList = () => {
     const fetchDBData = async (pageNumber: number) => {
@@ -21,8 +35,17 @@ const HighscoreList = () => {
     } = useQuery(['leaderboards', pageNumber], () => fetchDBData(pageNumber));
 
     const handleNextPage = () => {
-        const nextPage = pageNumber + 1;
-        setPageNumber(nextPage);
+        if (leaderboardData.totalPages - 1 == pageNumber) {
+            setPageNumber(0);
+        } else {
+            const nextPage = pageNumber + 1;
+            setPageNumber(nextPage);
+            refetch();
+        }
+    };
+    const handlePrevPage = () => {
+        const prevPage = pageNumber - 1;
+        setPageNumber(prevPage);
         refetch();
     };
 
@@ -56,7 +79,10 @@ const HighscoreList = () => {
     return (
         <>
             <ul>{leaders}</ul>
-            <button onClick={handleNextPage}>Next Page</button>
+            <PageButton onClick={handleNextPage}>Next Page</PageButton>
+            {pageNumber > 0 ? (
+                <PageButton onClick={handlePrevPage}>Prev Page</PageButton>
+            ) : null}
         </>
     );
 };
