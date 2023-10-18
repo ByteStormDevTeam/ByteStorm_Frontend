@@ -42,7 +42,7 @@ const Blog = ({ title, date, content, imageRef, _id }: BlogType) => {
 
                     <BlogRight>
                         <BlogTitle>{title}</BlogTitle>
-                        <p>Date :{date}</p>
+                        <p>Date: {date}</p>
                         <p>{content}</p>
                     </BlogRight>
                 </BlogContainer>
