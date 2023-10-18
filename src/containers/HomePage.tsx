@@ -49,6 +49,18 @@ const HeroText = styled.p`
     top: 40%;
     left: 35.5%;
 `;
+const HeroLink = styled.p`
+    font-size: 2rem;
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Pixelify Sans';
+    font-weight: 300;
+    text-decoration: underline;
+    text-shadow: 2px 0px 16px black;
+    position: absolute;
+    top: 45%;
+    left: 41.5%;
+`;
 
 const HomePage = () => {
     const { blogData }: any = useOutletContext();
@@ -60,6 +72,11 @@ const HomePage = () => {
             <HeroContainer className="HomePageImage">
                 <HeroTitle>BYTESTORM</HeroTitle>
                 <HeroText>A pixel top down bullethell roguelike.</HeroText>
+                <HeroLink>
+                    <a href="https://oirien.itch.io/bytestorm">
+                        Download Here Now!
+                    </a>
+                </HeroLink>
             </HeroContainer>
             <PageContainer>
                 <BlogList blogData={blogData} />
