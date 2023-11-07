@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const fetchDBData = async () => {
-    const res = await axios.get('http://54.74.199.55:8080/api/blogpost/');
+    const res = await axios.get('http://3.253.106.18:8080/api/blogpost/');
     return res.data;
 };
 

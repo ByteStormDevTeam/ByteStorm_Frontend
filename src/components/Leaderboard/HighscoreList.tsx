@@ -21,7 +21,7 @@ const PageButton = styled.button`
 const HighscoreList = () => {
     const fetchDBData = async (pageNumber: number) => {
         const res = await axios.get(
-            `http://54.74.199.55:8080/api/leaderboard?page=${pageNumber}&pageSize=10`
+            `http://3.253.106.18:8080/api/leaderboard?page=${pageNumber}&pageSize=10`
         );
         return res.data;
     };
